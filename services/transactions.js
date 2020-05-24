@@ -4,7 +4,7 @@ const Transaction = require("../models/Transaction");
 exports.getTransactions = async (req, res) => {
   try {
     // Empty filter matches every Transaction
-    const transactions = await Transaction.find({});
+    const transactions = await Transaction.find();
     res.status(200).json({ success: true, transactions });
   } catch (error) {
     res.status(400).json({ success: false, error });

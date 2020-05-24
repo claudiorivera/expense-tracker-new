@@ -8,7 +8,6 @@
     "dev": "DEBUG=expense-tracker-new:* yarn run dev-start"
   },
   "dependencies": {
-    "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
     "mongoose": "^5.9.15",
