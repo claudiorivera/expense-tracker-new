@@ -1,17 +1,20 @@
 require("dotenv").config({ path: "./config/.env" });
-var express = require("express");
-var cookieParser = require("cookie-parser");
-var logger = require("morgan");
+const express = require("express");
+const cookieParser = require("cookie-parser");
+const logger = require("morgan");
 
-var usersRouter = require("./routes/users");
-
-var app = express();
-
+// Instantiate express and middleware
+const app = express();
 app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-app.use("/users", usersRouter);
+// Db connect
+require("./config/db")();
+
+// Routes
+const transactionsRouter = require("./routes/transactions");
+app.use("/transactions", transactionsRouter);
 
 module.exports = app;
