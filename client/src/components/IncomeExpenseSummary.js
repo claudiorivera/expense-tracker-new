@@ -1,19 +1,8 @@
 import React, { useContext } from "react";
-import { Typography, makeStyles } from "@material-ui/core";
 import NumberFormat from "react-number-format";
 import { GlobalContext } from "../contexts";
 
-const useStyles = makeStyles({
-  positive: {
-    color: "green",
-  },
-  negative: {
-    color: "red",
-  },
-});
-
 export const IncomeExpenseSummary = () => {
-  const classes = useStyles();
   const { transactions } = useContext(GlobalContext);
 
   let totalIncome = 0;
@@ -32,14 +21,14 @@ export const IncomeExpenseSummary = () => {
 
   return (
     <>
-      <Typography variant="h3" className={classes.positive}>
+      <h3>
         Income:
         <NumberFormat value={totalIncome} displayType={"text"} prefix={"$"} />
-      </Typography>
-      <Typography variant="h3" className={classes.negative}>
+      </h3>
+      <h3>
         Expenses:
         <NumberFormat value={totalExpenses} displayType={"text"} prefix={"$"} />
-      </Typography>
+      </h3>
     </>
   );
 };

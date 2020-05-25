@@ -5,17 +5,21 @@ import {
   Balance,
   IncomeExpenseSummary,
   TransactionsList,
+  AddTransaction,
 } from "./components";
-import { CssBaseline } from "@material-ui/core";
+import { Container, CssBaseline } from "@material-ui/core";
 
 function App() {
   return (
     <GlobalProvider>
       <CssBaseline />
-      <Header />
-      <Balance />
-      <IncomeExpenseSummary />
-      <TransactionsList />
+      <Container maxWidth="sm">
+        <Header />
+        <Balance />
+        <IncomeExpenseSummary />
+        <TransactionsList />
+        <AddTransaction />
+      </Container>
     </GlobalProvider>
   );
 }

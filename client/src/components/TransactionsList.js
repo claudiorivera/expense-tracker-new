@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../contexts";
-import { Typography } from "@material-ui/core";
 import { Transaction } from "../components";
 
 export const TransactionsList = () => {
@@ -8,7 +7,7 @@ export const TransactionsList = () => {
 
   return (
     <>
-      <Typography variant="h4">Transactions:</Typography>
+      <h2>Transactions:</h2>
       {transactions.map((transaction) => (
         <Transaction key={transaction._id} transaction={transaction} />
       ))}
