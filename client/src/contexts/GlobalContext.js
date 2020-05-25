@@ -19,6 +19,9 @@ export const GlobalProvider = ({ children }) => {
   const addTransaction = (transaction) => {
     dispatch({ type: "ADD_TRANSACTION", payload: transaction });
   };
+  const deleteTransactionById = (id) => {
+    dispatch({ type: "DELETE_TRANSACTION_BY_ID", payload: id });
+  };
 
   // Return provider with values
   return (
@@ -28,6 +31,7 @@ export const GlobalProvider = ({ children }) => {
         error: state.error,
         isFetching: state.isFetching,
         addTransaction,
+        deleteTransactionById,
       }}
     >
       {children}
