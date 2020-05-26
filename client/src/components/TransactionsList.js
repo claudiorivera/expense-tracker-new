@@ -7,6 +7,7 @@ export const TransactionsList = () => {
 
   useEffect(() => {
     getTransactions();
+    // eslint-disable-next-line
   }, []);
 
   return (
