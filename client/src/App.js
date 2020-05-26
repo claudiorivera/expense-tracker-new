@@ -7,15 +7,17 @@ import {
   TransactionsList,
   AddTransaction,
 } from "./components";
-import { CssBaseline, Grid } from "@material-ui/core";
+import { CssBaseline, Box, Paper } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
   root: {
-    border: 0,
-    height: 48,
-    margin: "20px auto",
     fontFamily: "Lato",
+    padding: "2vh 20vw",
+  },
+  cards: {
+    padding: "10px 20px",
+    margin: "10px 0px",
   },
 });
 
@@ -25,31 +27,21 @@ function App() {
   return (
     <GlobalProvider>
       <CssBaseline />
-      <Grid container direction="column">
-        <Grid item xs={12} className={classes.root}>
-          <Header />
-        </Grid>
-        <Grid
-          container
-          className={classes.root}
-          direction="column"
-          justify="center"
-          alignItems="center"
-        >
-          <Grid item xs={12} md={6}>
-            <Balance />
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <IncomeExpenseSummary />
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <TransactionsList />
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <AddTransaction />
-          </Grid>
-        </Grid>
-      </Grid>
+      <Box className={classes.root}>
+        <Header />
+        <Balance />
+        <Paper className={classes.cards}>
+          <IncomeExpenseSummary />
+        </Paper>
+        <h2>Transactions:</h2>
+        <Paper className={classes.cards}>
+          <TransactionsList />
+        </Paper>
+        <h2>Add Transaction:</h2>
+        <Paper className={classes.cards}>
+          <AddTransaction />
+        </Paper>
+      </Box>
     </GlobalProvider>
   );
 }

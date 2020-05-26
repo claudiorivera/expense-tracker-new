@@ -12,7 +12,6 @@ export const TransactionsList = () => {
 
   return (
     <>
-      <h2>Transactions:</h2>
       {transactions.map((transaction) => (
         <Transaction key={transaction._id} transaction={transaction} />
       ))}
