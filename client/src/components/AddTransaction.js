@@ -1,12 +1,10 @@
 import React, { useState, useContext } from "react";
 import { GlobalContext } from "../contexts";
-import { v4 as uuid } from "uuid";
 
 export const AddTransaction = () => {
   const initialState = {
     description: "",
     amount: "",
-    _id: uuid(),
   };
 
   const [transaction, setTransaction] = useState(initialState);
@@ -29,7 +27,7 @@ export const AddTransaction = () => {
           }}
           type="text"
           value={transaction.description}
-          placeholder="Enter description..."
+          placeholder="Enter description"
         />
         <input
           onChange={(e) => {
@@ -40,7 +38,7 @@ export const AddTransaction = () => {
           }}
           type="number"
           value={transaction.amount}
-          placeholder="Enter amount..."
+          placeholder="Enter amount"
         />
         <button type="submit">Submit</button>
       </form>

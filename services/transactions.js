@@ -14,8 +14,8 @@ exports.getTransactions = async (req, res) => {
 // POST /transactions - Add transaction
 exports.addTransaction = async (req, res) => {
   try {
-    await Transaction.create(req.body);
-    res.status(201).json({ success: true });
+    const addedTransaction = await Transaction.create(req.body);
+    res.status(201).json({ success: true, addedTransaction });
   } catch (error) {
     res.status(400).json({ success: false, error });
   }
