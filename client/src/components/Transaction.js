@@ -1,10 +1,26 @@
 import React, { useContext } from "react";
 import NumberFormat from "react-number-format";
-import { IconButton } from "@material-ui/core";
+import {
+  IconButton,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+} from "@material-ui/core";
 import { DeleteForever } from "@material-ui/icons";
+import { makeStyles } from "@material-ui/core/styles";
 import { GlobalContext } from "../contexts";
 
+const useStyles = makeStyles({
+  positive: {
+    color: "green",
+  },
+  negative: {
+    color: "red",
+  },
+});
+
 export const Transaction = ({ transaction }) => {
+  const classes = useStyles();
   const { deleteTransactionById } = useContext(GlobalContext);
 
   const handleDelete = () => {
@@ -12,16 +28,22 @@ export const Transaction = ({ transaction }) => {
   };
 
   return (
-    <h4>
-      <IconButton size="small" color="secondary" onClick={handleDelete}>
-        <DeleteForever fontSize="inherit" />
-      </IconButton>
-      {transaction.description}:
+    <ListItem>
+      <ListItemIcon>
+        <IconButton size="small" color="secondary" onClick={handleDelete}>
+          <DeleteForever fontSize="inherit" />
+        </IconButton>
+      </ListItemIcon>
+      <ListItemText
+        primary={transaction.description}
+        disableTypography={true}
+      />
       <NumberFormat
         value={transaction.amount}
         prefix={"$"}
         displayType={"text"}
+        className={transaction.amount < 0 ? classes.negative : classes.positive}
       />
-    </h4>
+    </ListItem>
   );
 };
