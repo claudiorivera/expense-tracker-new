@@ -11,6 +11,9 @@
     "client-install": "yarn --cwd client",
     "dev": "concurrently --names 'SERVER,CLIENT' -c 'bgBlue.bold,bgMagenta.bold' 'yarn run dev-server-start' 'yarn run client-start'"
   },
+  "engines": {
+    "node": "14.x"
+  },
   "dependencies": {
     "debug": "~2.6.9",
     "express": "~4.16.1",
