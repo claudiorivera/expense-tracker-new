@@ -15,7 +15,7 @@ const useStyles = makeStyles({
     fontFamily: "Lato",
     padding: "10% 20%",
   },
-  cards: {
+  paper: {
     padding: "10px",
     margin: "10px",
   },
@@ -30,15 +30,15 @@ function App() {
       <Box className={classes.root}>
         <Header />
         <Balance />
-        <Paper className={classes.cards}>
+        <Paper className={classes.paper}>
           <IncomeExpenseSummary />
         </Paper>
         <h2>Transactions:</h2>
-        <Paper className={classes.cards}>
+        <Paper className={classes.paper}>
           <TransactionsList />
         </Paper>
         <h2>Add Transaction:</h2>
-        <Paper className={classes.cards}>
+        <Paper className={classes.paper}>
           <AddTransaction />
         </Paper>
       </Box>

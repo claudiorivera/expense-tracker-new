@@ -8,6 +8,7 @@
     "dev-server": "nodemon --ignore /client ./bin/www",
     "dev-server-start": "DEBUG=expense-tracker-new:* yarn run dev-server",
     "client-start": "yarn --cwd client start",
+    "client-install": "yarn --cwd client",
     "dev": "concurrently --names 'SERVER,CLIENT' -c 'bgBlue.bold,bgMagenta.bold' 'yarn run dev-server-start' 'yarn run client-start'"
   },
   "dependencies": {

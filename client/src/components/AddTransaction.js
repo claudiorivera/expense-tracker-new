@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import { GlobalContext } from "../contexts";
+import { TextField, Button, Box } from "@material-ui/core";
 
 export const AddTransaction = () => {
   const initialState = {
@@ -19,26 +20,33 @@ export const AddTransaction = () => {
 
   return (
     <form onSubmit={onSubmit}>
-      <input
-        onChange={(e) => {
-          setTransaction({ ...transaction, description: e.target.value });
-        }}
-        type="text"
-        value={transaction.description}
-        placeholder="Enter description"
-      />
-      <input
-        onChange={(e) => {
-          setTransaction({
-            ...transaction,
-            amount: parseInt(e.target.value),
-          });
-        }}
-        type="number"
-        value={transaction.amount}
-        placeholder="Enter amount"
-      />
-      <button type="submit">Submit</button>
+      <Box display="flex" flexDirection="column" margin="10px">
+        <TextField
+          onChange={(e) => {
+            setTransaction({ ...transaction, description: e.target.value });
+          }}
+          value={transaction.description}
+          label="Description"
+          InputLabelProps={{
+            shrink: true,
+          }}
+        />
+        <TextField
+          type="number"
+          onChange={(e) => {
+            setTransaction({
+              ...transaction,
+              amount: parseInt(e.target.value),
+            });
+          }}
+          value={transaction.amount}
+          label="Amount"
+          InputLabelProps={{
+            shrink: true,
+          }}
+        />
+        <Button type="submit">Submit</Button>
+      </Box>
     </form>
   );
 };

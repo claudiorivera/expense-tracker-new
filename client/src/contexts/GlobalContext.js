@@ -55,7 +55,6 @@ export const GlobalProvider = ({ children }) => {
     }
   };
 
-  // Return provider with values
   return (
     <GlobalContext.Provider
       value={{
