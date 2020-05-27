@@ -11,7 +11,7 @@ export const Balance = () => {
 
   return (
     <h2>
-      Balance:
+      Balance:{" "}
       <NumberFormat
         thousandSeparator={true}
         displayType={"text"}

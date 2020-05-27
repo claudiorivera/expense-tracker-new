@@ -13,11 +13,11 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles({
   root: {
     fontFamily: "Lato",
-    padding: "2vh 20vw",
+    padding: "10% 20%",
   },
   cards: {
-    padding: "10px 20px",
-    margin: "10px 0px",
+    padding: "10px",
+    margin: "10px",
   },
 });
 
