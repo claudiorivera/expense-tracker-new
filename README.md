@@ -1,8 +1,8 @@
 # expense-tracker-new
 
-This is my version of the [Expense Tracker from Traversy Media's YouTube course](https://github.com/bradtraversy/expense-tracker-react), remade from scratch. My first version (following that course) [is located here](https://github.com/claudiorivera/expense-tracker).
+This is my version of the [Expense Tracker from Traversy Media's YouTube course](https://github.com/bradtraversy/expense-tracker-react), remade from scratch.
 
-The app uses React Context and Hooks, and this time around, I decided to use Material UI for styling. There are other minor tweaks, as well, including a different server directory structure that came from `express-generator`.
+The app uses React Context and Hooks, and I decided to use Material UI for styling. There are other minor tweaks, as well, including a different server directory structure that came from `express-generator`.
 
 # Install
 
