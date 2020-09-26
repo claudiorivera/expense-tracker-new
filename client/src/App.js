@@ -13,7 +13,7 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles({
   root: {
     fontFamily: "Lato",
-    padding: "5rem 10rem",
+    padding: "5vh 10vw",
   },
   paper: {
     padding: "10px",
