@@ -1,28 +1,36 @@
 {
-  "name": "expense-tracker-new-server",
+  "name": "express-tracker-new",
   "version": "1.0.0",
   "private": true,
-  "scripts": {
-    "start": "node ./bin/www",
-    "build": "yarn --cwd client install && yarn --cwd client build",
-    "dev-server": "nodemon --ignore /client ./bin/www",
-    "dev-server-start": "DEBUG=expense-tracker-new:* yarn run dev-server",
-    "client-start": "yarn --cwd client start",
-    "client-install": "yarn --cwd client",
-    "dev": "concurrently --names 'SERVER,CLIENT' -c 'bgBlue.bold,bgMagenta.bold' 'yarn run dev-server-start' 'yarn run client-start'"
-  },
-  "engines": {
-    "node": "14.x"
-  },
   "dependencies": {
-    "debug": "~4.1.1",
-    "dotenv": "^8.2.0",
-    "express": "~4.17.1",
-    "mongoose": "^5.9.18",
-    "morgan": "~1.10.0"
+    "@material-ui/core": "^4.10.1",
+    "@material-ui/icons": "^4.9.1",
+    "mongoose": "^5.10.8",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-number-format": "^4.4.1",
+    "react-scripts": "^3.4.3"
   },
-  "devDependencies": {
-    "concurrently": "^5.2.0",
-    "nodemon": "^2.0.4"
-  }
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {}
 }
