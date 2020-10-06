@@ -18,7 +18,7 @@ export const GlobalProvider = ({ children }) => {
   // Action creators
   const addTransaction = async (transactionToAdd) => {
     try {
-      const response = await fetch("/transactions", {
+      const response = await fetch("/api/transactions", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -36,7 +36,7 @@ export const GlobalProvider = ({ children }) => {
   };
   const deleteTransactionById = async (id) => {
     try {
-      const response = await fetch(`/transactions/${id}`, {
+      const response = await fetch(`/api/transactions/${id}`, {
         method: "DELETE",
       });
       await response.json();
@@ -47,7 +47,7 @@ export const GlobalProvider = ({ children }) => {
   };
   const getTransactions = async () => {
     try {
-      const response = await fetch("/transactions");
+      const response = await fetch("/api/transactions");
       const { transactions } = await response.json();
       dispatch({ type: "GET_TRANSACTIONS_SUCCESSFUL", payload: transactions });
     } catch (error) {
