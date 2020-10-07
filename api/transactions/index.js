@@ -9,8 +9,8 @@ const handler = async (req, res) => {
         const transactions = await Transaction.find({});
         if (!transactions) return res.status(400).json({ success: false });
         res.status(200).json({ success: true, transactions });
-      } catch (error) {
-        res.status(400).json({ success: false, error });
+      } catch ({ message }) {
+        res.status(400).json({ success: false, message });
       }
       break;
     case "POST":
@@ -18,8 +18,8 @@ const handler = async (req, res) => {
         const addedTransaction = await Transaction.create(req.body);
         if (!addedTransaction) return res.status(400).json({ success: false });
         res.status(201).json({ success: true, addedTransaction });
-      } catch (error) {
-        res.status(400).json({ success: false, error });
+      } catch ({ message }) {
+        res.status(400).json({ success: false, message });
       }
       break;
     default:
