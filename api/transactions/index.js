@@ -23,7 +23,7 @@ const handler = async (req, res) => {
       }
       break;
     default:
-      res.setHeader("Allow", ["GET", "PUT"]);
+      res.setHeader("Allow", ["GET", "POST"]);
       res.status(405).end(`Method ${req.method} Not Allowed`);
   }
 };

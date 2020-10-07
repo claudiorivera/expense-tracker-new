@@ -13,7 +13,7 @@ const handler = async (req, res) => {
       }
       break;
     default:
-      res.setHeader("Allow", ["GET", "PUT"]);
+      res.setHeader("Allow", ["DELETE"]);
       res.status(405).end(`Method ${req.method} Not Allowed`);
   }
 };
