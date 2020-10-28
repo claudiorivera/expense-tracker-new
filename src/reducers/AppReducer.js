@@ -1,4 +1,4 @@
-export default (state, action) => {
+const AppReducer = (state, action) => {
   switch (action.type) {
     case "GET_TRANSACTIONS_FAILED":
     case "ADD_TRANSACTION_FAILED":
@@ -34,3 +34,4 @@ export default (state, action) => {
       return state;
   }
 };
+export default AppReducer;
