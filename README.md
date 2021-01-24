@@ -4,6 +4,10 @@ This is my version of the [Expense Tracker from Traversy Media's YouTube course]
 
 The app uses React Context and Hooks, and I decided to use Material UI for styling. There are other minor tweaks, as well.
 
+# Prerequisites
+
+In order to develop locally, you'll need the [Vercel CLI](https://vercel.com/download)
+
 # Install
 
 `yarn`
@@ -14,4 +18,4 @@ Add a `.env.local` file that includes a `MONGODB_URI` value.
 
 # Dev
 
-`yarn dev`
+`vercel dev`
