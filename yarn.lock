@@ -10137,10 +10137,10 @@ react-is@^16.7.0, react-is@^16.8.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-17.0.1.tgz#5b3531bd76a645a4c9fb6e693ed36419e3301339"
   integrity sha512-NAnt2iGDXohE5LI7uBnLnqvLQMtzhkiAOLXTmv+qnF9Ky7xAPcX8Up/xWIhxvLVGJvuLiNc4xQLtuqDRzb4fSA==
 
-react-number-format@4.6.2:
-  version "4.6.2"
-  resolved "https://registry.yarnpkg.com/react-number-format/-/react-number-format-4.6.2.tgz#89636efe6da6d957c1a06f0d58ecfc1f0db30fff"
-  integrity sha512-l8gFJ7BRjl0/vUNAp3WVJAcgueaqvoJKDpm3ngsGlCo529ikQ1oUB2/EX6Te2yuN2dqL4NWRHzjyOGLwLPCRrg==
+react-number-format@4.6.3:
+  version "4.6.3"
+  resolved "https://registry.yarnpkg.com/react-number-format/-/react-number-format-4.6.3.tgz#41e99871e50167cc1ac86c961285504244382f55"
+  integrity sha512-AZJwR/2mnl1cTRxQRjIITKp+Rg+4bYgjNylw7it7+x9UyIUAEpEK3fETKCqC5F2mVW8S41Xc6gpeH3VcJbPRsg==
   dependencies:
     prop-types "^15.7.2"
 
